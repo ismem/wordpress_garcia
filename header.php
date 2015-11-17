@@ -43,9 +43,9 @@
                                         <!-- Collect the nav links, forms, and other content for toggling -->
                                         <div class="collapse navbar-collapse" id="top-nav-collapse">
                                                 <ul class="nav navbar-nav">
-                                                        <li><a href="#">Home</a></li>
-                                                        <li><a href="#">About</a></li>
-                                                        <li><a href="#">Contact</a></li>
+                                                        <li><a href="#">Inicio</a></li>
+                                                        <li><a href="#">Nosotros</a></li>
+                                                        <li><a href="#">Contactos</a></li>
                                                 </ul>
 
                                                 <form class="navbar-form navbar-right" role="search">
