@@ -1,0 +1,111 @@
+/* TYPOGRAPHY 
+============= */
+/*Body*/ 
+body { 
+        color                   : @darker-text; 
+        font-family             : @body-font;
+        font-size               : 13px; 
+        -ms-word-wrap           : break-word;
+        word-wrap               : break-word; 
+}
+ 
+/*Anchor*/
+a {
+        color                   : @body-link-color; 
+        -webkit-transition      : color .2s, background .2s, border .2s;
+        -moz-transition         : color .2s, background .2s, border .2s;
+        -o-transition           : color .2s, background .2s, border .2s;
+        transition              : color .2s, background .2s, border .2s;
+        
+        &:hover { 
+                color           : @primary;
+                text-decoration : none; 
+        }
+}
+h1, h2, h3, h4, h5, h6 { 
+        a {
+                color: @headings-link-color;
+                &:hover { color: @primary }                
+        }
+}
+
+/*Blockquote*/
+blockquote {
+        font-family     : @headings-font;
+        font-size       : 20px;        
+        padding         : 15px;
+        
+        &, p { line-height: 1.4 }
+        
+        footer { 
+                margin-top: 10px;
+        }
+}
+
+/*Headings*/
+h1, h2, h3, h4, h5, h6 {
+        font-family     : @headings-font;
+        font-weight     : bold; 
+        margin          : 0 0 15px;
+}
+h5 { font-size   : 15px; }
+
+/*Horizontal line*/
+hr { 
+        clear           : both;
+        border-color    : @light-border;
+        margin          : 0 0 15px;
+}
+
+/*Paragraphs*/
+p { 
+        line-height         : 20px;
+        margin              : 0 0 15px;
+        -moz-column-gap     : 30px; /* Firefox */
+        -webkit-column-gap  : 30px; /* Safari and Chrome */
+        column-gap          : 30px;
+
+        &.col-2 { .column-count(2); }     
+        &.col-3 { .column-count(3); }     
+        &.col-4 { .column-count(4); } 
+
+        @media(max-width: 768px) { 
+                &.col-3, 
+                &.col-4 { .column-count(2); } 
+        } 
+        @media(max-width: 512px) { 
+                &.col-2, 
+                &.col-3,
+                &.col-4 { .column-count(1); } 
+        } 
+}
+
+/*Dropcaps*/
+span.dropcaps,
+p.dropcaps:first-letter {
+        float           : left;
+        font-size       : 45.5px;
+        line-height     : 40px;
+        margin-right    : 5px; 
+}
+
+/*Post meta*/
+.post-meta,
+.comment-meta,
+.comment-container .reply { 
+        a { 
+                color           : @dark-text;  
+                font-family     : @headings-font; 
+                font-size       : 13px;
+                line-height     : 13px;  
+                display         : inline-block;
+
+                &:hover { color: @primary }
+        }
+}
+
+.post-meta .dashicons {
+        font-size       : 13px;
+        height          : auto;
+        width           : auto;
+}
